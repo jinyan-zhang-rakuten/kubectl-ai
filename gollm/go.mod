@@ -10,6 +10,7 @@ require (
 	github.com/Azure/azure-sdk-for-go/sdk/azidentity v1.9.0
 	github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/cognitiveservices/armcognitiveservices v1.7.0
 	github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/subscription/armsubscription v1.2.0
+	github.com/anthropics/anthropic-sdk-go v1.5.0
 	github.com/ollama/ollama v0.6.5
 	github.com/openai/openai-go v1.0.0
 	google.golang.org/genai v1.8.0

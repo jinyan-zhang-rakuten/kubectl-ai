@@ -63,7 +63,7 @@ nix-shell -p kubectl-ai
 
 ### Usage
 
-`kubectl-ai` supports AI models from `gemini`, `vertexai`, `azopenai`, `openai`, `grok` and local LLM providers such as `ollama` and `llama.cpp`.
+`kubectl-ai` supports AI models from `gemini`, `vertexai`, `azopenai`, `openai`, `anthropic`, `grok` and local LLM providers such as `ollama` and `llama.cpp`.
 
 #### Using Gemini (Default)
 
@@ -136,6 +136,28 @@ You can also use OpenAI models by setting your OpenAI API key and specifying the
 export OPENAI_API_KEY=your_openai_api_key_here
 kubectl-ai --llm-provider=openai --model=gpt-4.1
 ```
+
+#### Using Anthropic/Claude
+
+You can use Anthropic's Claude models by setting your Anthropic API key and specifying the provider:
+
+```bash
+export ANTHROPIC_API_KEY=your_anthropic_api_key_here
+kubectl-ai --llm-provider=anthropic --model=claude-3-5-sonnet-20241022
+
+# Alternative provider name
+kubectl-ai --llm-provider=claude --model=claude-3-5-haiku-20241022
+
+# Use with a specific model
+kubectl-ai --llm-provider=anthropic --model=claude-3-opus-20240229
+```
+
+Available Claude models:
+- `claude-3-5-sonnet-20241022` (default)
+- `claude-3-5-haiku-20241022`
+- `claude-3-opus-20240229`
+- `claude-3-sonnet-20240229`
+- `claude-3-haiku-20240307`
 
 #### Using OpenAI Compatible API
 For example, you can use aliyun qwen-xxx models as follows
